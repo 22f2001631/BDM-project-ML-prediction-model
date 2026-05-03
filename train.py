@@ -45,7 +45,7 @@ def get_phase(m):
 df["Phase"] = df["Month"].apply(get_phase)
 df["Phase_enc"] = phase_encoder.fit_transform(df["Phase"])
 
-# FEATURES (ONLY WHAT YOU WANT)
+# FEATURES
 X = df[["Route_enc", "Day_enc", "Phase_enc"]]
 
 # TARGET (MULTI OUTPUT)
